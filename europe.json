@@ -1,9 +1,11 @@
-// see http://upload.wikimedia.org/wikipedia/commons/a/a3/Diplomacy.svg
+
 {
+	"_comment": "see http://upload.wikimedia.org/wikipedia/commons/a/a3/Diplomacy.svg",
+	
 	"players":
 	[
-	  {"name":"Western Empire", "color":"red", "home":{"Spa"}, "armies":{"Spa"}},
-	  {"name":"Eastern Empire", "color":"blue", "home":{"Par"}, "armies":{"Par"}}
+	  {"name":"Western Empire", "color":"red", "home":["Spa"], "armies":["Spa"]},
+	  {"name":"Eastern Empire", "color":"blue", "home":["Par"], "armies":["Par"]}
 	],
 	"territories":
 	[
