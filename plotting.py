@@ -9,7 +9,16 @@ def plotTerritories( borders, terr ):
 	names = [t.name for t in terr]
 	plt.scatter(x,y)
 	for t in terr:
-		plt.annotate( t.name, (t.x, t.y))
+		c = 'gray'
+		style = 'square'
+		if t.terrain == "coastal":
+			style = 'round'
+		elif t.terrain == "sea":
+			c = 'blue'
+			style = 'round'
+		plt.annotate( t.name, (t.x, t.y), 
+			horizontalalignment='center', verticalalignment='center',
+			bbox=dict(facecolor=c, boxstyle=style))
 	print names
 
 def plotBorders( borders, terr ):

@@ -13,6 +13,7 @@ class Unit:
 class Territory:
 	name = "None"
 	short = "shrt"
+	terrain = "coastal"
 	x = 0.0
 	y = 0.0
 	def __init__(self, name, short, x=0.0, y=0.0):

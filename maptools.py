@@ -38,6 +38,8 @@ def loadMapJSON( filename ):
 	territories = []
 	for t in data['territories']:
 		newTerritory = Territory(t['name'], t['short'], t['x'], t['y'])
+		if 'terrain' in t:
+			newTerritory.terrain = t['terrain']
 		territories.append( newTerritory )
 
 	print territories
