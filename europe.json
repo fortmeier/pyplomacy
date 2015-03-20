@@ -1,21 +1,27 @@
+// see http://upload.wikimedia.org/wikipedia/commons/a/a3/Diplomacy.svg
 {
+	"players":
+	[
+	  {"name":"Western Empire", "color":"red", "home":{"Spa"}, "armies":{"Spa"}},
+	  {"name":"Eastern Empire", "color":"blue", "home":{"Par"}, "armies":{"Par"}}
+	],
 	"territories":
 	[
-		{"short":"mid","name":"MidAtlantic", "terrain":"sea", "x":-5, "y":5 },
-		{"short":"spn","name":"Spain","x":0, "y":0, "div":["nc", "sc"] },
-		{"short":"ptg","name":"Portugal","x":-5, "y":0},
-		{"short":"gsc","name":"Gascony","x":5, "y":5 },
-		{"short":"par","name":"Paris", "terrain":"land", "x":5, "y":8 },
-		{"short":"mar","name":"Marseilles","x":8, "y":0 }
+		{"short":"MAO","name":"MidAtlantic", "terrain":"sea", "x":-5, "y":5 },
+		{"short":"Spa","name":"Spain","x":0, "y":0, "div":["nc", "sc"] },
+		{"short":"Por","name":"Portugal","x":-5, "y":0},
+		{"short":"Gas","name":"Gascony","x":5, "y":5 },
+		{"short":"Par","name":"Paris", "terrain":"land", "x":5, "y":8 },
+		{"short":"Mar","name":"Marseilles","x":8, "y":0 }
 	],
 	"borders":
 	[
-		{"A": "gsc", "B": "par", "type":"armies"},
-		{"A": "spn", "B": "ptg", "type":"all"},
-		{"A": "spn", "B": "gsc", "type":"all", "modA":"nc"},
-		{"A": "spn", "B": "mar", "type":"all", "modA":"sc"},
-		{"A": "spn", "B": "mid", "type":"fleets"},
-		{"A": "ptg", "B": "mid", "type":"fleets"}
+		{"A": "Gas", "B": "Par", "type":"armies"},
+		{"A": "Spa", "B": "Por", "type":"all"},
+		{"A": "Spa", "B": "Gas", "type":"all", "modA":"nc"},
+		{"A": "Spa", "B": "Mar", "type":"all", "modA":"sc"},
+		{"A": "Spa", "B": "MAO", "type":"fleets"},
+		{"A": "Por", "B": "MAO", "type":"fleets"}
 
 	]
 }
