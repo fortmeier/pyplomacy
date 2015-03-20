@@ -3,7 +3,7 @@
 
 import matplotlib.pyplot as plt
 
-def plotTerritories( g, terr ):
+def plotTerritories( borders, terr ):
 	x = [t.x for t in terr]
 	y = [t.y for t in terr]
 	names = [t.name for t in terr]
@@ -12,23 +12,23 @@ def plotTerritories( g, terr ):
 		plt.annotate( t.name, (t.x, t.y))
 	print names
 
-def plotBorders( g, terr ):
-	for A,B in g:
+def plotBorders( borders, terr ):
+	for A,B in borders:
 		c = 'black'
-		if g[A,B] == "fleets":
+		if borders[A,B].type == 'fleets':
 			c = 'blue'
-		elif g[A,B] == "armies":
+		elif borders[A,B].type == 'armies':
 			c = 'brown'
 
 		plt.plot([A.x, B.x], [A.y, B.y], color=c)
 
-def plotUnits( g, u ):
+def plotUnits( borders, u ):
 
 	print u
 		
 
-def plotMap( g, terr, units ):
-	plotTerritories( g, terr )
-	plotBorders( g, terr )
-	plotUnits( g, units )
+def plotMap( borders, terr, units ):
+	plotTerritories( borders,  terr )
+	plotBorders( borders,  terr )
+	plotUnits( borders,  units )
 	plt.show()

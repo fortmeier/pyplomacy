@@ -23,3 +23,19 @@ class Territory:
 
 	def __repr__(self):
 		return "<%s (%s)>" % (self.name, self.short)
+
+class Border:
+	A = "None"
+	B = "None"
+	modA = "None"
+	modB = "None"
+	typ = "all"
+	def __init__(self, A, B, typ="all", modA="None", modB="None"):
+		self.A = A
+		self.B = B
+		self.modA = modA
+		self.modB = modB
+		self.type = typ
+
+	def __repr__(self):
+		return "< %s -- %s -- %s >" % (self.A.short, self.type, self.B.short)

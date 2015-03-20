@@ -1,0 +1,21 @@
+{
+	"territories":
+	[
+		{"short":"mid","name":"MidAtlantic","x":-5, "y":5 },
+		{"short":"spn","name":"Spain","x":0, "y":0, "div":["nc", "sc"] },
+		{"short":"ptg","name":"Portugal","x":-5, "y":0},
+		{"short":"gsc","name":"Gascony","x":5, "y":5 },
+		{"short":"par","name":"Paris","x":5, "y":8 },
+		{"short":"mar","name":"Marseilles","x":8, "y":0 }
+	],
+	"borders":
+	[
+		{"A": "gsc", "B": "par", "type":"armies"},
+		{"A": "spn", "B": "ptg", "type":"all"},
+		{"A": "spn", "B": "gsc", "type":"all", "modA":"nc"},
+		{"A": "spn", "B": "mar", "type":"all", "modA":"sc"},
+		{"A": "spn", "B": "mid", "type":"fleets"},
+		{"A": "ptg", "B": "mid", "type":"fleets"}
+
+	]
+}
