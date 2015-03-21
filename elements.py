@@ -1,7 +1,7 @@
 class Player:
 	name = "None"
 	def __init__(self, name):
-		self.name=name
+		self.name = name
 
 class Unit:
 	owner = "None"

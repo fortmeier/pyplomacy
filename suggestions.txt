@@ -1,0 +1,30 @@
+General suggestions
+###################
+- Renaming "Players" (from map) to "Nations".
+- "Players" should be the actual agents, with their names and IP/address
+
+- Territories should not require to supply graph-coordinates, but rather center-coordinates of countries in a map-image
+
+- Map should be provided as SVG?
+
+Communication base
+##################
+JSON-RPC sounds nice
+	http://json-rpc.org/
+is well specified
+	http://www.jsonrpc.org/specification
+and seems to have implementation for most programming languages
+	http://en.wikipedia.org/wiki/JSON-RPC#Implementations
+
+Found resources
+###############
+Diplomacy move visualization tool (online only):
+	http://www.games2relax.net/diplomap/
+Solver, command-processing and map creation tool:
+	http://www.hagenah.de/diptool/
+Large collection of maps:
+	http://www.diplom.org/Online/maps.html
+Rule-variants and more:
+	http://www.floc.net/dpjudge/
+Parsing an SCG file with Python:
+	http://www.petercollingridge.co.uk/blog/extracting-map-information-svg
