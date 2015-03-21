@@ -8,7 +8,6 @@
 # status development
 
 # build-in modules
-from functools import wraps
 
 # third-party modules
 from werkzeug.wrappers import Request, Response
@@ -52,15 +51,18 @@ def hold(playerid, territory):
     Returns
     -------
     command : string
-        Complete, default-formatted command. E.g. 'A swe -> nor'
+        Complete, default-formatted command. E.g. 'A swe'
     """
-    return 'player {} strives to hold in {}'.format(playerid, territory)
+    return 'A {}'.format(territory)
 
 ###################
 # request handler #
 ###################
 @Request.application
 def application(request):
+    r"""
+    Main server application for handling JSON-RPC request.
+    """
     # check authentication and retrieve associated player-id
     auth = request.authorization
     if not auth or not check_auth(auth.username, auth.password):
