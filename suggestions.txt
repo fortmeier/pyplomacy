@@ -7,6 +7,11 @@ General suggestions
 
 - Map should be provided as SVG?
 
+Logic base
+##########
+(E-Mail) based judges:
+	http://usak.asciiking.com/guide.html
+
 Communication base
 ##################
 JSON-RPC sounds nice
