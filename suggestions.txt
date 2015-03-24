@@ -3,9 +3,12 @@ General suggestions
 - Renaming "Players" (from map) to "Nations".
 - "Players" should be the actual agents, with their names and IP/address
 
-- Territories should not require to supply graph-coordinates, but rather center-coordinates of countries in a map-image
+Dirk: Full Ack.
 
+- Territories should not require to supply graph-coordinates, but rather center-coordinates of countries in a map-image
+Dirk: Might be interesting for debugging purposes to have a graph independant of the SVG based visualization
 - Map should be provided as SVG?
+Dirk: Yes!
 
 Logic base
 ##########
@@ -31,5 +34,7 @@ Large collection of maps:
 	http://www.diplom.org/Online/maps.html
 Rule-variants and more:
 	http://www.floc.net/dpjudge/
-Parsing an SCG file with Python:
+Parsing an SVG file with Python:
 	http://www.petercollingridge.co.uk/blog/extracting-map-information-svg
+Parsing can also be done by
+	https://docs.python.org/2/library/xml.etree.elementtree.html#elementtree-xpath

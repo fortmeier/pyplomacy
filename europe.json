@@ -2,10 +2,15 @@
 {
 	"_comment": "see http://upload.wikimedia.org/wikipedia/commons/a/a3/Diplomacy.svg",
 	
-	"players":
+	"nations":
 	[
-	  {"name":"Western Empire", "color":"red", "home":["Spa"], "armies":["Spa"]},
-	  {"name":"Eastern Empire", "color":"blue", "home":["Par"], "armies":["Par"]}
+	  {"name":"Austria", "color":"#FF0000", "home":["Tyr","Vie","Bud","Tri"], "armies":["Spa"]},
+	  {"name":"England", "color":"#0000FF", "home":["Cly", "Edi", "Lvp", "Yor", "Wal", "Lon"], "armies":["Spa"]},
+	  {"name":"France", "color":"#00FFFF", "home":["Pic", "Bre", "Par", "Bur", "Gas", "Mar", "Spa"], "armies":["Spa"]},
+	  {"name":"Germany", "color":"#808080", "home":["Kie","Ruh","Ber","Mun","Pru","Sil"], "armies":["Spa"]},
+	  {"name":"Italy", "color":"#00FF00", "home":["Ven", "Tus","Rom","Apu","Nap"], "armies":["Spa"]},
+	  {"name":"Russia", "color":"#008000", "home":["Fin","Stp","Lvn","War","Mos","Ukr","Sev"], "armies":["Spa"]},
+	  {"name":"Turkey", "color":"#FFFF00", "home":["Con","Ank","Smy","Arm","Syr"], "armies":["Par"]}
 	],
 	"territories":
 	[
