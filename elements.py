@@ -5,9 +5,16 @@ class Player:
 
 class Unit:
 	owner = "None"
+	territory = None
 	utype = "Army"
-	def __init__(self, player):
+
+	def __init__(self, player, territory, utype="Army"):
 		self.owner = player
+		self.territory = territory
+		self.utype = utype
+
+	def __repr__(self):
+		return "<{} at {}>".format(self.utype, self.territory)
 
 
 class Territory:
@@ -45,4 +52,19 @@ class Border:
 
 
 class GameState:
-	terretories = [] # implement!
+	territories = []
+	units = []
+	borders = []
+	occupations = []
+
+	def __init__(self, territories, units, borders, occupations):
+		self.territories = territories
+		self.units = units
+		self.borders = borders
+		self.occupations = occupations
+
+	def getUnitAt(self, territory):
+		for unit in self.units:
+			if unit.territory == territory:
+				return unit
+		return None

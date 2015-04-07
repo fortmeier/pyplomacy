@@ -18,14 +18,18 @@ print borders
 
 
 settings = { "year": 1901, "season": "spring"}
-gamestate = ( territories, units, borders, settings )
+gamestate = GameState( territories, units, borders, occupations )
 
-orders = {}
+orders = { "moves" : [{"nation": "France", "origin":"Par", "target":"Gas", "mod":False}] }
+
+print "--------"
+print units
 
 logic.processGame( gamestate, orders )
 
+print units
 
-plotMap( borders, territories, units )
+#plotMap( borders, territories, units )
 
 
 while False:

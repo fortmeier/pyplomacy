@@ -1,16 +1,16 @@
 from elements import *
 import json
 
-spain = Territory("Spain", "spn" )
-portu = Territory("Portugal", "ptg", -5, 0)
-midat = Territory("Mid-Atlantic", "mid", -5, 5)
+#spain = Territory("Spain", "spn" )
+#portu = Territory("Portugal", "ptg", -5, 0)
+#midat = Territory("Mid-Atlantic", "mid", -5, 5)
 
-territories = [spain, portu, midat]
+#territories = [spain, portu, midat]
 
-borders = { (spain,portu): "all", (spain,midat) : "fleets" }
+#borders = { (spain,portu): "all", (spain,midat) : "fleets" }
 
-occupations = {}
-units = { spain: Unit("p1"), portu: Unit("p2")}
+#occupations = {}
+#units = { spain: Unit("p1"), portu: Unit("p2")}
 
 
 
@@ -54,10 +54,16 @@ def loadMapJSON( filename ):
 
 	#print borders
 
+	units = []
+	for n in data['nations']:
+		for terrUnitIn in n['armies']:
+			newUnit = Unit(n['name'], terrUnitIn, "Army")
+			units.append(newUnit)
+
 	occupations = {}
 	for n in data['nations']:
 		for o in n['home']:
 			print n['name'] + ' ' + o
 			occupations[o] = n['name']
 
-	return (territories, borders, {}, occupations)
+	return (territories, borders, units, occupations)
