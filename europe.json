@@ -23,12 +23,12 @@
 	],
 	"borders":
 	[
-		{"A": "Gas", "B": "Par", "type":"armies"},
-		{"A": "Spa", "B": "Por", "type":"all"},
-		{"A": "Spa", "B": "Gas", "type":"all", "modA":"nc"},
-		{"A": "Spa", "B": "Mar", "type":"all", "modA":"sc"},
-		{"A": "Spa", "B": "MAO", "type":"fleets"},
-		{"A": "Por", "B": "MAO", "type":"fleets"}
+		{"A": "Gas", "B": "Par", "typ":"armies"},
+		{"A": "Spa", "B": "Por", "typ":"all"},
+		{"A": "Spa", "B": "Gas", "typ":"all", "modA":["nc"]},
+		{"A": "Spa", "B": "Mar", "typ":"all", "modA":["sc"]},
+		{"A": "Spa", "B": "MAO", "typ":"fleets", "modA":["sc","nc"]},
+		{"A": "Por", "B": "MAO", "typ":"fleets"}
 
 	]
 }

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import matplotlib.pyplot as plt
+from maptools import *
 
 def plotTerritories( borders, terr ):
 	x = [t.x for t in terr]
@@ -29,7 +30,11 @@ def plotBorders( borders, terr ):
 		elif borders[A,B].type == 'armies':
 			c = 'brown'
 
-		plt.plot([A.x, B.x], [A.y, B.y], color=c)
+		Ax = getTerritory(terr, A).x
+		Ay = getTerritory(terr, A).y
+		Bx = getTerritory(terr, B).x
+		By = getTerritory(terr, B).y
+		plt.plot([Ax, Bx], [Ay, By], color=c)
 
 def plotUnits( borders, u ):
 

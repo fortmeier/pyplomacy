@@ -28,10 +28,10 @@ class Territory:
 class Border:
 	A = "None"
 	B = "None"
-	modA = "None"
-	modB = "None"
+	modA = []
+	modB = []
 	typ = "all"
-	def __init__(self, A, B, typ="all", modA="None", modB="None"):
+	def __init__(self, A, B, typ="all", modA=[], modB=[]):
 		self.A = A
 		self.B = B
 		self.modA = modA
@@ -39,4 +39,10 @@ class Border:
 		self.type = typ
 
 	def __repr__(self):
-		return "< %s -- %s -- %s >" % (self.A.short, self.type, self.B.short)
+		modAstring = "" if self.modA == [] else self.modA
+		modBstring = "" if self.modB == [] else self.modB
+		return "< {} -{}- {} -{}- {} >".format(self.A, modAstring, self.type, modBstring, self.B)
+
+
+class GameState:
+	terretories = [] # implement!

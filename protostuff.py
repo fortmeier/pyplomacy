@@ -4,7 +4,7 @@ import maptools
 import logic
 import sys
 
-territories, borders, units, occupations = maptools.loadMap()
+#territories, borders, units, occupations = maptools.loadMap()
 territories, borders, units, occupations = maptools.loadMapJSON('europe.json')
 
 
@@ -26,6 +26,7 @@ logic.processGame( gamestate, orders )
 
 
 plotMap( borders, territories, units )
+
 
 while False:
 	for p in players:

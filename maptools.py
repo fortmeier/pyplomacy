@@ -35,6 +35,8 @@ def loadMapJSON( filename ):
 	with open( filename ) as data_file:    
 		data = json.load(data_file)
 
+	# voll guter Oskar-foo:
+	# territories = [Territory(**t) for t in data['territories']]
 	territories = []
 	for t in data['territories']:
 		newTerritory = Territory(t['name'], t['short'], t['x'], t['y'])
@@ -46,9 +48,9 @@ def loadMapJSON( filename ):
 
 	borders = {}
 	for b in data['borders']:
-		A = getTerritory( territories, b['A'] )
-		B = getTerritory( territories, b['B'] )
-		borders[(A,B)] = Border(A,B,b['type'])
+		A = b['A'] #getTerritory( territories, b['A'] )
+		B = b['B'] #getTerritory( territories, b['B'] )
+		borders[(A,B)] = Border(**b) #A,B,b['type'])
 
 	#print borders
 
