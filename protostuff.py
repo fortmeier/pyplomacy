@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from plotting import *
 from elements import *
 import maptools
