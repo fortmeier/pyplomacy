@@ -19,15 +19,15 @@ def main():
     response = requests.post(
         url, data=json.dumps(payload), headers=headers, auth=HTTPBasicAuth('loli', 'loli'))
 
-    print response
+    print(response)
     
     response = response.json()
     
-    print response
+    print(response)
 
-    print response['result']
-    print response['jsonrpc']
-    print response['id'] == 0
+    print(response['result'])
+    print(response['jsonrpc'])
+    print(response['id'] == 0)
 
 if __name__ == "__main__":
     main()

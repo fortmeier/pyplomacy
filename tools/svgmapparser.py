@@ -38,8 +38,8 @@ for g in soup.svg.findAll('g'):
             units[nation].append((g.get('title'), 'F'))
                                  
         
-#print homes
-#print units
+#print(homes)
+#print(units)
 for t in territories:
-    print t
+    print(t)
 

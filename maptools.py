@@ -44,7 +44,7 @@ def loadMapJSON( filename ):
 			newTerritory.terrain = t['terrain']
 		territories.append( newTerritory )
 
-	#print territories
+	#print(territories)
 
 	borders = {}
 	for b in data['borders']:
@@ -52,7 +52,7 @@ def loadMapJSON( filename ):
 		B = b['B'] #getTerritory( territories, b['B'] )
 		borders[(A,B)] = Border(**b) #A,B,b['type'])
 
-	#print borders
+	#print(borders)
 
 	units = []
 	for n in data['nations']:
@@ -63,7 +63,7 @@ def loadMapJSON( filename ):
 	occupations = {}
 	for n in data['nations']:
 		for o in n['home']:
-			print n['name'] + ' ' + o
+			print(n['name'] + ' ' + o)
 			occupations[o] = n['name']
 
 	return (territories, borders, units, occupations)

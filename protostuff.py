@@ -16,7 +16,7 @@ p2 = Player("B-Man")
 
 players = [p1, p2]
 
-print borders
+print(borders)
 
 
 settings = { "year": 1901, "season": "spring"}
@@ -24,19 +24,19 @@ gamestate = GameState( territories, units, borders, occupations )
 
 orders = { "moves" : [{"nation": "France", "origin":"Par", "target":"Gas", "mod":False}] }
 
-print "--------"
-print units
+print("--------")
+print(units)
 
 logic.processGame( gamestate, orders )
 
-print units
+print(units)
 
 #plotMap( borders, territories, units )
 
 
 while False:
 	for p in players:
-		print "Enter command for "+str(p.name)+":"
+		print("Enter command for "+str(p.name)+":")
 		line = sys.stdin.readline()
 		if line == "exit\n": break
 

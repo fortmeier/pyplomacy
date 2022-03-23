@@ -20,7 +20,7 @@ def plotTerritories( borders, terr ):
 		plt.annotate( t.name, (t.x, t.y), 
 			horizontalalignment='center', verticalalignment='center',
 			bbox=dict(facecolor=c, boxstyle=style))
-	print names
+	print(names)
 
 def plotBorders( borders, terr ):
 	for A,B in borders:
@@ -38,7 +38,7 @@ def plotBorders( borders, terr ):
 
 def plotUnits( borders, u ):
 
-	print u
+	print(u)
 		
 
 def plotMap( borders, terr, units ):

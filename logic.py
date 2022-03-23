@@ -1,5 +1,5 @@
 def processGame( gamestate, orders ):
-	print "Orders given: " + str(orders)
+	print("Orders given: " + str(orders))
 
 	struggles = {}
 
@@ -14,7 +14,7 @@ def processGame( gamestate, orders ):
 			struggles[move["target"]] = {}
 		struggles[move["target"]][move["origin"]] = 1
 
-	print struggles
+	print(struggles)
 
 	# todo add processing of supports here
 
@@ -22,16 +22,16 @@ def processGame( gamestate, orders ):
 
 	while winner_found:
 		winner_found = False
-		for target, struggle in struggles.iteritems():
-			strengths = struggle.values()
+		for target, struggle in struggles.items():
+			strengths = list(struggle.values())
 			max_strength = max(strengths)
 			if strengths.count(max_strength) == 1:
 				origin = sorted(struggle.items(), key=lambda x: x[1], reverse=True)[0][0]
-				print "orig: ", origin, "target:", target
+				print("orig: ", origin, "target:", target)
 				if origin == target:
 					continue
 				winner_found = True
-				print "STRUGGLES: ",struggles
+				print("STRUGGLES: ",struggles)
 
 				struggles[origin][origin] -= 1
 				gamestate.getUnitAt(origin).territory = target
